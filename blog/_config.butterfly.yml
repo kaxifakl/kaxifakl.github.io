@@ -7,7 +7,7 @@
 #   name: link || icon
 
 menu:
-#Home: / || fas fa-home
+  Home: / || fas fa-home
 #Archives: /archives/ || fas fa-archive
 # Tags: /tags/ || fas fa-tags
 # Categories: /categories/ || fas fa-folder-open
@@ -42,8 +42,7 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github:
-  #   https://github.com/kaxifakl || Github
+  fab fa-github: https://github.com/kaxifakl || Github
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
 
 # search (搜索)
@@ -128,7 +127,7 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+  # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -190,12 +189,12 @@ post_copyright:
 reward:
   enable: false
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+  # - img: /img/wechat.jpg
+  #   link:
+  #   text: wechat
+  # - img: /img/alipay.jpg
+  #   link:
+  #   text: alipay
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -462,10 +461,10 @@ google_adsense:
 # --------------------------------------
 
 site_verification:
-  # - name: google_site_verification
-  #   content: xxxxxx
-  # - name: baidu_site_verification
-  #   content: xxxxxxx
+# - name: google_site_verification
+#   content: xxxxxx
+# - name: baidu_site_verification
+#   content: xxxxxxx
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
@@ -566,9 +565,9 @@ click_heart:
 ClickShowText:
   enable: false
   text:
-    # - I
-    # - LOVE
-    # - YOU
+  # - I
+  # - LOVE
+  # - YOU
   fontSize: 15px
   random: false
   mobile: false
@@ -776,8 +775,8 @@ note:
 pjax:
   enable: false
   exclude:
-    # - xxxx
-    # - xxxx
+  # - xxxx
+  # - xxxx
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
@@ -837,7 +836,7 @@ inject:
   head:
   # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    # - <script src="xxxx"></script>
+  # - <script src="xxxx"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
