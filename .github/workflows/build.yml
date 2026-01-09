@@ -28,9 +28,12 @@ jobs:
             - uses: actions/checkout@v4
               with:
                   repository: "kaxifakl/article"
-                  path: "_article-build/source"
+                  path: "_article"
                   ref: "main"
                   token: ${{ secrets.PUSH_TOKEN }}
+            - run: |
+                # 将 _article 内容复制到build
+                cp -r _article/doc/* ./_article-build/source
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
               with:
