@@ -33,6 +33,8 @@ jobs:
                   token: ${{ secrets.PUSH_TOKEN }}
             - run: |
                 # 将 _article 内容复制到build
+                # 创建 _article-build/source/_posts 目录
+                mkdir -p _article-build/source/_posts
                 cp -r _article/docs/* _article-build/source/_posts
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
