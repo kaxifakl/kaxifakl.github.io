@@ -33,7 +33,6 @@ jobs:
                 npm run build
             - name: Move public to root
               run: |
-                cd ..
                 # 开启扩展 glob
                 shopt -s extglob
 
