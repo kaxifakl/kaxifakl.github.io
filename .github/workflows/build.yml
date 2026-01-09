@@ -25,6 +25,12 @@ jobs:
                   path: "_article-build"
                   ref: "main"
                   token: ${{ secrets.PUSH_TOKEN }}
+            - uses: actions/checkout@v4
+              with:
+                  repository: "kaxifakl/article"
+                  path: "_article-build/source"
+                  ref: "main"
+                  token: ${{ secrets.PUSH_TOKEN }}
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
               with:
