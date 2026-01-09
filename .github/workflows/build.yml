@@ -22,14 +22,15 @@ jobs:
                   path: "_article-build"
                   ref: "main"
                   token: ${{ secrets.PUSH_TOKEN }}
-            # - uses: actions/checkout@v4
-            - run: cd _article-build
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: npm install --omit=dev
-            - run: npm run build
+            # - uses: actions/checkout@v4
+            - run: |
+                cd _article-build
+                npm install --omit=dev
+                npm run build
             - name: Move public to root
               run: |
                 cd ..
