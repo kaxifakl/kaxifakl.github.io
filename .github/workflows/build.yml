@@ -38,13 +38,13 @@ jobs:
                 shopt -s extglob
 
                 # 删除根目录旧文件（保留 git 相关）
-                rm -rf !(article-build|.git|.github|.gitignore|ads.txt)
+                rm -rf !(_article-build|.git|.github|.gitignore|ads.txt)
 
-                # 将 article-build/public 内容平铺到根目录
-                cp -r article-build/public/* .
+                # 将 _article-build/public 内容平铺到根目录
+                cp -r _article-build/public/* .
 
                 # 可选：清理构建目录
-                rm -rf article-build
+                rm -rf _article-build
             - name: Commit and push
               run: |
                 git config user.name "github-actions[bot]"
