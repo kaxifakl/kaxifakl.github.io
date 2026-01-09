@@ -33,11 +33,13 @@ jobs:
                 npm run build
             - name: Move public to root
               run: |
-                # 开启扩展 glob
-                shopt -s extglob
-
-                # 删除根目录旧文件（保留 git 相关）
-                rm -rf !(_article-build|.git|.github|.gitignore|ads.txt)
+                # 清空根目录（保留 git / workflow / 构建目录）
+                find . -maxdepth 1 \
+                ! -name '.git' \
+                ! -name '.github' \
+                ! -name '_article-build' \
+                ! -name '.' \
+                -exec rm -rf {} +
 
                 # 将 _article-build/public 内容平铺到根目录
                 cp -r _article-build/public/* .
@@ -46,6 +48,9 @@ jobs:
                 rm -rf _article-build
             - name: Commit and push
               run: |
+                pwd
+                # 一定要看到 .git
+                ls -a   
                 git config user.name "github-actions[bot]"
                 git config user.email "github-actions[bot]@users.noreply.github.com"
 
