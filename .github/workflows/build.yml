@@ -1,0 +1,55 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: build
+
+on:
+    workflow_dispatch:
+        
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [22.x]
+                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  repository: "kaxifakl/article-build"
+                  path: "_article-build"
+                  ref: "main"
+                  token: ${{ secrets.PUSH_TOKEN }}
+            # - uses: actions/checkout@v4
+            - run: cd _article-build
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "npm"
+            - run: npm install --omit=dev
+            - run: npm run build
+            - name: Move public to root
+              run: |
+                cd ..
+                # 开启扩展 glob
+                shopt -s extglob
+
+                # 删除根目录旧文件（保留 git 相关）
+                rm -rf !(article-build|.git|.github|.gitignore|ads.txt)
+
+                # 将 article-build/public 内容平铺到根目录
+                cp -r article-build/public/* .
+
+                # 可选：清理构建目录
+                rm -rf article-build
+            - name: Commit and push
+              run: |
+                git config user.name "github-actions[bot]"
+                git config user.email "github-actions[bot]@users.noreply.github.com"
+
+                git add -A
+                git commit -m "build: GitHub Action"
+                git push
