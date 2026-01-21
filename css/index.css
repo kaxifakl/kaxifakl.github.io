@@ -1830,7 +1830,7 @@ table td {
   vertical-align: middle;
 }
 *::selection {
-  background: #00c4b6;
+  background: #1a1c20;
   color: #f7f7f7;
 }
 button {
@@ -3728,7 +3728,7 @@ figure.highlight pre .javascript .function {
   margin-top: -9px;
   color: #a9a9a9;
   font-style: italic;
-  font-size: 140%;
+  font-size: 80%;
 }
 #aside-content #card-toc .toc-content {
   overflow-y: scroll;
@@ -5070,7 +5070,6 @@ figure.highlight pre .javascript .function {
   box-shadow: 0 0 8px 0 rgba(232,237,250,0.6), 0 2px 4px 0 rgba(232,237,250,0.5);
 }
 #post .post-copyright .post-copyright-meta {
-  color: #121212;
   font-weight: bold;
 }
 #post .post-copyright .post-copyright-meta i {
