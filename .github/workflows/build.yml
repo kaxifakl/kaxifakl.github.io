@@ -57,6 +57,9 @@ jobs:
                 ! -name '.' \
                 -exec rm -rf {} +
 
+                # 将assets 复制到根目录
+                cp -r _article-build/assets/* .
+
                 # 将 _article-build/public 内容平铺到根目录
                 cp -r _article-build/public/* .
 
