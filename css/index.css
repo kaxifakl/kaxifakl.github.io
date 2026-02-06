@@ -1830,7 +1830,7 @@ table td {
   vertical-align: middle;
 }
 *::selection {
-  background: #00c4b6;
+  background: #1a1c20;
   color: #f7f7f7;
 }
 button {
@@ -2320,7 +2320,7 @@ figure.highlight pre .javascript .function {
   -webkit-line-clamp: 2;
 }
 .article-sort-item-title:hover {
-  color: #121212;
+  color: #eee;
   -webkit-transform: translateX(10px);
   -moz-transform: translateX(10px);
   -o-transform: translateX(10px);
@@ -2364,7 +2364,7 @@ figure.highlight pre .javascript .function {
   color: var(--font-color);
 }
 .category-lists .category-list a:hover {
-  color: #121212;
+  color: #eee;
 }
 .category-lists .category-list .category-list-count {
   margin-left: 8px;
@@ -2733,7 +2733,7 @@ figure.highlight pre .javascript .function {
   }
 }
 #recent-posts .recent-post-item >.recent-post-info > .article-title:hover {
-  color: #121212;
+  color: #eee;
 }
 #recent-posts .recent-post-item >.recent-post-info > .article-meta-wrap {
   margin: 6px 0;
@@ -2762,7 +2762,7 @@ figure.highlight pre .javascript .function {
   color: var(--card-meta);
 }
 #recent-posts .recent-post-item >.recent-post-info > .article-meta-wrap a:hover {
-  color: #121212;
+  color: #eee;
   text-decoration: underline;
 }
 #recent-posts .recent-post-item >.recent-post-info > .content {
@@ -3494,7 +3494,7 @@ figure.highlight pre .javascript .function {
   line-height: 1.8;
 }
 #aside-content .card-tag-cloud a:hover {
-  color: #121212 !important;
+  color: #eee !important;
 }
 #aside-content .aside-list > span {
   display: block;
@@ -3559,7 +3559,7 @@ figure.highlight pre .javascript .function {
 }
 #aside-content .aside-list > .aside-list-item .content > .title:hover,
 #aside-content .aside-list > .aside-list-item .content > .comment:hover {
-  color: #121212;
+  color: #eee;
 }
 #aside-content .aside-list > .aside-list-item.no-cover {
   min-height: 4.4em;
@@ -3728,7 +3728,7 @@ figure.highlight pre .javascript .function {
   margin-top: -9px;
   color: #a9a9a9;
   font-style: italic;
-  font-size: 140%;
+  font-size: 80%;
 }
 #aside-content #card-toc .toc-content {
   overflow-y: scroll;
@@ -3785,10 +3785,10 @@ figure.highlight pre .javascript .function {
   border-radius: 6px;
 }
 #aside-content #card-toc .toc-content .toc-link:hover {
-  color: #121212;
+  color: #eee;
 }
 #aside-content #card-toc .toc-content .toc-link.active {
-  background: #00c4b6;
+  background: #1a1c20;
   color: #fff;
 }
 #aside-content .sticky_layout:only-child > :first-child {
@@ -4570,7 +4570,7 @@ figure.highlight pre .javascript .function {
   transition: all 0.3s ease-out;
 }
 #post-info #post-meta a:hover {
-  color: #121212;
+  color: #eee;
   text-decoration: underline;
 }
 #nav {
@@ -5070,7 +5070,6 @@ figure.highlight pre .javascript .function {
   box-shadow: 0 0 8px 0 rgba(232,237,250,0.6), 0 2px 4px 0 rgba(232,237,250,0.5);
 }
 #post .post-copyright .post-copyright-meta {
-  color: #121212;
   font-weight: bold;
 }
 #post .post-copyright .post-copyright-meta i {
