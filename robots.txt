@@ -1,1 +1,10 @@
-sitemap: https://kaxifa.eu.org/sitemaptest.xml
+Sitemap: https://kaxifa.eu.org/sitemaptest.xml
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
