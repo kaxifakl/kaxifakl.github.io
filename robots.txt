@@ -1,1 +1,1 @@
-sitemap: https://kaxifa.eu.org/sitemap.xml
+sitemap: https://kaxifa.eu.org/sitemaptest.xml
